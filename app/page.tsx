@@ -11,7 +11,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RotatableAvatar } from "@/components/ui/rotatable-avatar";
 import { Typewriter } from "@/components/ui/typewriter";
-import Link from "next/link";
+import { TimelineItem } from "@/components/timeline-item";
+import { EXPERIENCE_DATA } from "./constants";
 
 export default function Home() {
 	return (
@@ -116,86 +117,19 @@ export default function Home() {
 					</div>
 					<div className="max-w-4xl mx-auto">
 						<div className="relative">
-							{/* Timeline line */}
 							<div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border"></div>
 
 							<div className="space-y-8">
-								<div className="relative flex items-start space-x-4">
-									<div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-background relative z-10"></div>
-									<Card className="flex-1">
-										<CardHeader>
-											<div className="flex justify-between items-start">
-												<div>
-													<CardTitle className="text-lg">
-														フルスタックエンジニア
-													</CardTitle>
-													<CardDescription>
-														<Link href="https://pocketsign.co.jp/">
-														株式会社ポケットサイン
-														</Link>
-														
-													</CardDescription>
-												</div>
-												<Badge variant="outline">August 2025 - Present</Badge>
-											</div>
-										</CardHeader>
-										<CardContent>
-											<p className="text-muted-foreground">
-												株式会社ポケットサインにてフルスタックエンジニアを担当
-											</p>
-										</CardContent>
-									</Card>
-								</div>
-
-								<div className="relative flex items-start space-x-4">
-									<div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-background relative z-10"></div>
-									<Card className="flex-1">
-										<CardHeader>
-											<div className="flex justify-between items-start">
-												<div>
-													<CardTitle className="text-lg">
-														フロントエンドエンジニア
-													</CardTitle>
-													<CardDescription>
-														<Link href="https://algo-method.co.jp/">
-														株式会社アルゴ式
-														</Link>
-														
-													</CardDescription>
-												</div>
-												<Badge variant="outline">March 2025 - Present</Badge>
-											</div>
-										</CardHeader>
-										<CardContent>
-											<p className="text-muted-foreground">
-												株式会社アルゴ式にてフロントエンドエンジニアを担当
-											</p>
-										</CardContent>
-									</Card>
-								</div>
-
-								<div className="relative flex items-start space-x-4">
-									<div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-background relative z-10"></div>
-									<Card className="flex-1">
-										<CardHeader>
-											<div className="flex justify-between items-start">
-												<div>
-													<CardTitle className="text-lg">
-														プログラミングの勉強を開始
-													</CardTitle>
-													<CardDescription>Previous Company</CardDescription>
-												</div>
-												<Badge variant="outline">April 2024 - Present</Badge>
-											</div>
-										</CardHeader>
-										<CardContent>
-											<p className="text-muted-foreground">
-												大学入学後、早稲田大学のコンピュータサークルWINCに参加し、
-												プログラミングの基礎を学び始めました。
-											</p>
-										</CardContent>
-									</Card>
-								</div>
+								{EXPERIENCE_DATA.map((experience, index) => (
+									<TimelineItem
+										key={index}
+										title={experience.title}
+										affiliation={experience.affiliation}
+										affiliationUrl={experience.affiliationUrl}
+										period={experience.period}
+										description={experience.description}
+									/>
+								))}
 							</div>
 						</div>
 					</div>
