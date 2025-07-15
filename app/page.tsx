@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { RotatableAvatar } from "@/components/ui/rotatable-avatar";
 import { Typewriter } from "@/components/ui/typewriter";
 import { TimelineItem } from "@/components/timeline-item";
-import { EXPERIENCE_DATA } from "./constants";
+import { EXPERIENCE_DATA, SKILLS_DATA } from "./constants";
 
 export default function Home() {
 	return (
@@ -66,12 +66,9 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
-									<Badge variant="secondary">Next.js</Badge>
-									<Badge variant="secondary">React</Badge>
-									<Badge variant="secondary">Shadcn</Badge>
-									<Badge variant="secondary">Tailwind CSS</Badge>
-									<Badge variant="secondary">TypeScript</Badge>
-									<Badge variant="secondary">Astro</Badge>
+									{SKILLS_DATA.frontend.map((skill) => (
+										<Badge key={skill} variant="secondary">{skill}</Badge>
+									))}
 								</div>
 							</CardContent>
 						</Card>
@@ -81,12 +78,9 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
-									<Badge variant="secondary">Ruby on Rails</Badge>
-									<Badge variant="secondary">Hono</Badge>
-									<Badge variant="secondary">Node.js</Badge>
-									<Badge variant="secondary">Prisma</Badge>
-									<Badge variant="secondary">Python</Badge>
-									<Badge variant="secondary">PostgreSQL</Badge>
+									{SKILLS_DATA.backend.map((skill) => (
+										<Badge key={skill} variant="secondary">{skill}</Badge>
+									))}
 								</div>
 							</CardContent>
 						</Card>
@@ -96,11 +90,9 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
-									<Badge variant="secondary">Git</Badge>
-									<Badge variant="secondary">Docker</Badge>
-									<Badge variant="secondary">Vercel</Badge>
-									<Badge variant="secondary">Slack</Badge>
-									<Badge variant="secondary">Figma</Badge>
+									{SKILLS_DATA.tools.map((skill) => (
+										<Badge key={skill} variant="secondary">{skill}</Badge>
+									))}
 								</div>
 							</CardContent>
 						</Card>
@@ -157,7 +149,7 @@ export default function Home() {
 								<Button variant="outline" className="w-full">
 									LinkedIn
 								</Button>
-								<Button variant="outline" className="w-full">
+								<Button variant="outline" className="w-full" onClick={() => window.open("https://github.com/tsukuneA1/")}>
 									GitHub
 								</Button>
 								<Button variant="outline" className="w-full">

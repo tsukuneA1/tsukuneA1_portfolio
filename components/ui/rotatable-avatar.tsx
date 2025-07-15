@@ -9,7 +9,7 @@ interface RotatableAvatarProps {
   className?: string;
 }
 
-export function RotatableAvatar({ src, alt, className = "" }: RotatableAvatarProps) {
+export const RotatableAvatar = ({ src, alt, className = "" }: RotatableAvatarProps) => {
   const [rotation, setRotation] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startAngle, setStartAngle] = useState(0);

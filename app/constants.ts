@@ -36,3 +36,29 @@ export const EXPERIENCE_DATA = [
     affiliationUrl: "https://www.winc.ne.jp/"
   }
 ] as const;
+
+export const SKILLS_DATA = {
+  frontend: [
+    "Next.js",
+    "React", 
+    "Shadcn",
+    "Tailwind CSS",
+    "TypeScript",
+    "Astro"
+  ],
+  backend: [
+    "Ruby on Rails",
+    "Hono",
+    "Node.js",
+    "Prisma",
+    "Python",
+    "PostgreSQL"
+  ],
+  tools: [
+    "Git",
+    "Docker",
+    "Vercel",
+    "Slack",
+    "Figma"
+  ]
+} as const;
