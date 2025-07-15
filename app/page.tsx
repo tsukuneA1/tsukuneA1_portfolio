@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { RotatableAvatar } from "@/components/ui/rotatable-avatar";
 import { Typewriter } from "@/components/ui/typewriter";
 import Link from "next/link";
 
@@ -20,13 +20,10 @@ export default function Home() {
 				{/* Biography Section */}
 				<section id="biography" className="space-y-6">
 					<div className="text-center space-y-4">
-						<Avatar className="mx-auto w-36 h-36">
-							<AvatarImage
-								src="avatar.png"
-								alt="TsukuneA1's Avatar"
-								className="rounded-full w-36 h-36 mx-auto object-cover"
-							/>
-						</Avatar>
+						<RotatableAvatar
+							src="avatar.png"
+							alt="TsukuneA1's Avatar"
+						/>
 						<h1 className="text-4xl font-bold tracking-tight text-white">TsukuneA1</h1>
 
 						<div className="flex flex-wrap justify-center whitespace-pre text-[26px] sm:text-2xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center font-bold text-4xl bg-gradient-to-r from-blue-500 via-emerald-400 to-purple-500 bg-clip-text text-transparent">
