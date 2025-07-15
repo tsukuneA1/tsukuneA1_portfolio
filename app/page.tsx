@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	Card,
 	CardContent,
@@ -8,8 +10,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
-import Image from "next/image";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Typewriter } from "@/components/ui/typewriter";
 
 export default function Home() {
 	return (
@@ -27,10 +29,18 @@ export default function Home() {
 							/>
 						</Avatar>
 						<h1 className="text-4xl font-bold tracking-tight">TsukuneA1</h1>
-						<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-							A brief introduction about yourself and your passion for
-							development.
-						</p>
+						
+						<div className="flex flex-wrap justify-center whitespace-pre text-2xl sm:text-3xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center">
+							<span className="font-bold">I'm a</span>
+							<Typewriter
+							typeWriterText={[
+								" software engineer",
+								" web developer",
+								" full-stack developer",
+								" typescript enthusiast",
+							]}
+							/>
+						</div>
 					</div>
 					<Card className="max-w-4xl mx-auto">
 						<CardHeader>
