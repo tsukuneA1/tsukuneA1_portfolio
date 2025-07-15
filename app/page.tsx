@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Typewriter } from "@/components/ui/typewriter";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -30,7 +31,7 @@ export default function Home() {
 						</Avatar>
 						<h1 className="text-4xl font-bold tracking-tight">TsukuneA1</h1>
 
-						<div className="flex flex-wrap justify-center whitespace-pre text-2xl sm:text-3xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center">
+						<div className="flex flex-wrap justify-center whitespace-pre text-2xl sm:text-3xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center font-bold text-4xl bg-gradient-to-r from-blue-500 via-emerald-400 to-purple-500 bg-clip-text text-transparent">
 							<span className="font-bold">I'm a</span>
 							<Typewriter
 								typeWriterText={[
@@ -124,7 +125,33 @@ export default function Home() {
 							<div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border"></div>
 
 							<div className="space-y-8">
-								{/* Experience Item 1 */}
+								<div className="relative flex items-start space-x-4">
+									<div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-background relative z-10"></div>
+									<Card className="flex-1">
+										<CardHeader>
+											<div className="flex justify-between items-start">
+												<div>
+													<CardTitle className="text-lg">
+														フルスタックエンジニア
+													</CardTitle>
+													<CardDescription>
+														<Link href="https://pocketsign.co.jp/">
+														株式会社ポケットサイン
+														</Link>
+														
+													</CardDescription>
+												</div>
+												<Badge variant="outline">August 2025 - Present</Badge>
+											</div>
+										</CardHeader>
+										<CardContent>
+											<p className="text-muted-foreground">
+												株式会社ポケットサインにてフルスタックエンジニアを担当
+											</p>
+										</CardContent>
+									</Card>
+								</div>
+
 								<div className="relative flex items-start space-x-4">
 									<div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-background relative z-10"></div>
 									<Card className="flex-1">
@@ -134,7 +161,12 @@ export default function Home() {
 													<CardTitle className="text-lg">
 														フロントエンドエンジニア
 													</CardTitle>
-													<CardDescription>株式会社アルゴ式</CardDescription>
+													<CardDescription>
+														<Link href="https://algo-method.co.jp/">
+														株式会社アルゴ式
+														</Link>
+														
+													</CardDescription>
 												</div>
 												<Badge variant="outline">March 2025 - Present</Badge>
 											</div>
@@ -147,7 +179,6 @@ export default function Home() {
 									</Card>
 								</div>
 
-								{/* Experience Item 2 */}
 								<div className="relative flex items-start space-x-4">
 									<div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-background relative z-10"></div>
 									<Card className="flex-1">

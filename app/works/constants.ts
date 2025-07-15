@@ -1,14 +1,14 @@
 type Work = {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    technologies: string[];
-    demoUrl: string;
-    githubUrl: string;
-    detailUrl: string;
-    year: string;
-}
+	id: number;
+	title: string;
+	description: string;
+	image: string;
+	technologies: string[];
+	demoUrl: string;
+	githubUrl: string;
+	detailUrl: string;
+	year: string;
+};
 
 export const works: Work[] = [
 	{
@@ -27,6 +27,6 @@ export const works: Work[] = [
 		demoUrl: "https://nejiki-calculator.com/",
 		githubUrl: "https://github.com/tsukuneA1/nejiki_calculator",
 		year: "2024",
-        detailUrl: "works/nejiki-calculator",
+		detailUrl: "works/nejiki-calculator",
 	},
 ] as const;

@@ -18,22 +18,22 @@ export type Work = {
 	technologies: string[];
 	demoUrl: string;
 	githubUrl: string;
-    detailUrl: string;
+	detailUrl: string;
 };
 
 export const WorkCard = (work: Work) => {
 	return (
 		<Card className="group hover:shadow-lg transition-shadow">
-            <Link href={work.detailUrl}>
-            <div className="aspect-video bg-muted rounded-t-lg relative overflow-hidden">
-				<img
-					src={work.image}
-					alt={work.title}
-					className="w-full h-full object-contain"
-				/>
-			</div>
-            </Link>
-			
+			<Link href={work.detailUrl}>
+				<div className="aspect-video bg-muted rounded-t-lg relative overflow-hidden">
+					<img
+						src={work.image}
+						alt={work.title}
+						className="w-full h-full object-contain"
+					/>
+				</div>
+			</Link>
+
 			<CardHeader>
 				<div className="flex justify-between items-start">
 					<CardTitle className="text-lg group-hover:text-primary transition-colors">
