@@ -29,7 +29,7 @@ export default function Home() {
 						</Avatar>
 						<h1 className="text-4xl font-bold tracking-tight text-white">TsukuneA1</h1>
 
-						<div className="flex flex-wrap justify-center whitespace-pre text-2xl sm:text-3xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center font-bold text-4xl bg-gradient-to-r from-blue-500 via-emerald-400 to-purple-500 bg-clip-text text-transparent">
+						<div className="flex flex-wrap justify-center whitespace-pre text-xl sm:text-2xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center font-bold text-4xl bg-gradient-to-r from-blue-500 via-emerald-400 to-purple-500 bg-clip-text text-transparent">
 							<span className="font-bold">I'm a</span>
 							<Typewriter
 								typeWriterText={[
