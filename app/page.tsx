@@ -9,15 +9,13 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Header } from "@/components/header";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Typewriter } from "@/components/ui/typewriter";
 import Link from "next/link";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-background">
-			<Header />
+		<div className="min-h-screen bg-background bg-gray-900">
 			<div className="container mx-auto px-4 py-8 space-y-24">
 				{/* Biography Section */}
 				<section id="biography" className="space-y-6">
@@ -29,7 +27,7 @@ export default function Home() {
 								className="rounded-full w-36 h-36 mx-auto object-cover"
 							/>
 						</Avatar>
-						<h1 className="text-4xl font-bold tracking-tight">TsukuneA1</h1>
+						<h1 className="text-4xl font-bold tracking-tight text-white">TsukuneA1</h1>
 
 						<div className="flex flex-wrap justify-center whitespace-pre text-2xl sm:text-3xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center font-bold text-4xl bg-gradient-to-r from-blue-500 via-emerald-400 to-purple-500 bg-clip-text text-transparent">
 							<span className="font-bold">I'm a</span>
@@ -58,7 +56,7 @@ export default function Home() {
 				{/* Skills Section */}
 				<section id="skills" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight">Skills</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-white">Skills</h2>
 						<p className="text-muted-foreground mt-2">
 							Technologies and tools I work with
 						</p>
@@ -114,7 +112,7 @@ export default function Home() {
 				{/* Experience Section */}
 				<section id="experience" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight">Experience</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-white">Experience</h2>
 						<p className="text-muted-foreground mt-2">
 							My professional journey
 						</p>
@@ -209,7 +207,7 @@ export default function Home() {
 				{/* Contact Section */}
 				<section id="contact" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight">Contact</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-white">Contact</h2>
 						<p className="text-muted-foreground mt-2">Get in touch with me</p>
 					</div>
 					<Card className="max-w-2xl mx-auto">
