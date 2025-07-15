@@ -29,16 +29,16 @@ export default function Home() {
 							/>
 						</Avatar>
 						<h1 className="text-4xl font-bold tracking-tight">TsukuneA1</h1>
-						
+
 						<div className="flex flex-wrap justify-center whitespace-pre text-2xl sm:text-3xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center">
 							<span className="font-bold">I'm a</span>
 							<Typewriter
-							typeWriterText={[
-								" software engineer",
-								" web developer",
-								" full-stack developer",
-								" typescript enthusiast",
-							]}
+								typeWriterText={[
+									" software engineer",
+									" web developer",
+									" full-stack developer",
+									" typescript enthusiast",
+								]}
 							/>
 						</div>
 					</div>
