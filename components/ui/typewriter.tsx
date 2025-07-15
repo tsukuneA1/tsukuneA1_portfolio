@@ -14,7 +14,6 @@ export const Typewriter = ({typeWriterText}: TypewriterProps) => {
                     loop: true,
                     delay: 40,
                     deleteSpeed: 15,
-                    pauseFor: 4500,
                     wrapperClassName: "font-extrabold",
                     cursor: "",
                 }}
