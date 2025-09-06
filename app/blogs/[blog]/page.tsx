@@ -1,13 +1,10 @@
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { blogPosts } from "../constants";
 import { readFile } from "fs/promises";
 import { join } from "path";
-
-type BlogPageProps = Promise<{
-	blog: string;
-}>;
 
 async function getBlogContent(id: string): Promise<string> {
 	try {
@@ -28,10 +25,10 @@ async function getBlogContent(id: string): Promise<string> {
 export default async function BlogPage({
 	params,
 }: {
-	params: Promise<{ slug: string }>;
+	params: Promise<{ blog: string }>;
 }) {
-	const { slug } = await params;
-	const post = blogPosts.find((p) => p.id === slug);
+	const { blog } = await params;
+	const post = blogPosts.find((p) => p.id === blog);
 
 	if (!post) {
 		notFound();
@@ -39,7 +36,7 @@ export default async function BlogPage({
 
 	let content: string;
 	try {
-		content = await getBlogContent(slug);
+		content = await getBlogContent(blog);
 	} catch (error) {
 		notFound();
 	}
@@ -54,6 +51,7 @@ export default async function BlogPage({
 			<div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900">
 				<ReactMarkdown
 					remarkPlugins={[remarkGfm]}
+					rehypePlugins={[rehypeRaw]}
 					components={{
 						h1: ({ node, ...props }) => (
 							<h1
