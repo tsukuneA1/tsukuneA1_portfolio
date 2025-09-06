@@ -5,11 +5,9 @@ import { blogPosts } from "../constants";
 import { readFile } from "fs/promises";
 import { join } from "path";
 
-interface BlogPageProps {
-	params: {
-		blog: string;
-	};
-}
+type BlogPageProps = Promise<{
+	blog: string;
+}>;
 
 async function getBlogContent(id: string): Promise<string> {
 	try {
@@ -27,8 +25,13 @@ async function getBlogContent(id: string): Promise<string> {
 	}
 }
 
-export default async function BlogPage({ params }: BlogPageProps) {
-	const post = blogPosts.find((p) => p.id === params.blog);
+export default async function BlogPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>;
+}) {
+	const { slug } = await params;
+	const post = blogPosts.find((p) => p.id === slug);
 
 	if (!post) {
 		notFound();
@@ -36,7 +39,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
 	let content: string;
 	try {
-		content = await getBlogContent(params.blog);
+		content = await getBlogContent(slug);
 	} catch (error) {
 		notFound();
 	}

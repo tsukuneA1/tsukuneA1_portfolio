@@ -18,13 +18,12 @@ export type Work = {
 	technologies: string[];
 	demoUrl: string;
 	githubUrl: string;
-	detailUrl: string;
 };
 
 export const WorkCard = (work: Work) => {
 	return (
 		<Card className="group hover:shadow-lg transition-shadow">
-			<Link href={work.detailUrl}>
+			<Link href={work.githubUrl}>
 				<div className="aspect-video bg-muted rounded-t-lg relative overflow-hidden">
 					<img
 						src={work.image}
