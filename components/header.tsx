@@ -25,7 +25,12 @@ export function Header() {
 						{navItems.map((item) => (
 							<Button
 								key={item.href}
-								variant={pathname === item.href ? "default" : "ghost"}
+								variant={
+									(item.href === "/" && pathname === "/") ||
+									(item.href !== "/" && pathname.startsWith(item.href))
+										? "default"
+										: "ghost"
+								}
 								asChild
 							>
 								<Link href={item.href}>{item.label}</Link>
