@@ -21,11 +21,10 @@ export default function Home() {
 				{/* Biography Section */}
 				<section id="biography" className="space-y-6">
 					<div className="text-center space-y-4">
-						<RotatableAvatar
-							src="avatar.png"
-							alt="TsukuneA1's Avatar"
-						/>
-						<h1 className="text-4xl font-bold tracking-tight text-white">TsukuneA1</h1>
+						<RotatableAvatar src="avatar.png" alt="TsukuneA1's Avatar" />
+						<h1 className="text-4xl font-bold tracking-tight text-white">
+							TsukuneA1
+						</h1>
 
 						<div className="flex flex-wrap justify-center whitespace-pre text-[26px] sm:text-2xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center font-bold text-4xl bg-gradient-to-r from-blue-500 via-emerald-400 to-purple-500 bg-clip-text text-transparent">
 							<span className="font-bold">I'm a</span>
@@ -54,7 +53,9 @@ export default function Home() {
 				{/* Skills Section */}
 				<section id="skills" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white">Skills</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-white">
+							Skills
+						</h2>
 						<p className="text-muted-foreground mt-2">
 							Technologies and tools I work with
 						</p>
@@ -67,7 +68,9 @@ export default function Home() {
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
 									{SKILLS_DATA.frontend.map((skill) => (
-										<Badge key={skill} variant="secondary">{skill}</Badge>
+										<Badge key={skill} variant="secondary">
+											{skill}
+										</Badge>
 									))}
 								</div>
 							</CardContent>
@@ -79,7 +82,9 @@ export default function Home() {
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
 									{SKILLS_DATA.backend.map((skill) => (
-										<Badge key={skill} variant="secondary">{skill}</Badge>
+										<Badge key={skill} variant="secondary">
+											{skill}
+										</Badge>
 									))}
 								</div>
 							</CardContent>
@@ -91,7 +96,9 @@ export default function Home() {
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
 									{SKILLS_DATA.tools.map((skill) => (
-										<Badge key={skill} variant="secondary">{skill}</Badge>
+										<Badge key={skill} variant="secondary">
+											{skill}
+										</Badge>
 									))}
 								</div>
 							</CardContent>
@@ -102,7 +109,9 @@ export default function Home() {
 				{/* Experience Section */}
 				<section id="experience" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white">Experience</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-white">
+							Experience
+						</h2>
 						<p className="text-muted-foreground mt-2">
 							My professional journey
 						</p>
@@ -130,7 +139,9 @@ export default function Home() {
 				{/* Contact Section */}
 				<section id="contact" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white">Contact</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-white">
+							Contact
+						</h2>
 						<p className="text-muted-foreground mt-2">Get in touch with me</p>
 					</div>
 					<Card className="max-w-2xl mx-auto">
@@ -149,7 +160,11 @@ export default function Home() {
 								<Button variant="outline" className="w-full">
 									LinkedIn
 								</Button>
-								<Button variant="outline" className="w-full" onClick={() => window.open("https://github.com/tsukuneA1/")}>
+								<Button
+									variant="outline"
+									className="w-full"
+									onClick={() => window.open("https://github.com/tsukuneA1/")}
+								>
 									GitHub
 								</Button>
 								<Button variant="outline" className="w-full">
