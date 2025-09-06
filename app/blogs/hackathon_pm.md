@@ -1,5 +1,5 @@
 # WINCというサークルの夏合宿ハッカソンでPMをやった話
-[リポジトリ](https://github.com/tsukuneA1/git_feed)
+[リポジトリ](https://github.com/tsukuneA1/git_feed) <br/>
 早稲田大学のWINCというプログラミングサークルで毎年夏に開催されているアプリ開発ハッカソンに参加しました。
 なぜかPMをやっていてGithubの情報をFFだったりフォローしていなくても受動的にfeedできるアプリを開発していました。
 詳しい内容はリポジトリのREADMEを参照してください。
