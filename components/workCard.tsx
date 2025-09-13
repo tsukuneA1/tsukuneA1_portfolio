@@ -53,7 +53,7 @@ export const WorkCard = (work: Work) => {
 					<Button
 						size="sm"
 						variant="default"
-						className="flex-1"
+						className="flex-1 cursor-pointer"
 						onClick={() => window.open(work.demoUrl, "_blank")}
 					>
 						Demo
@@ -62,7 +62,7 @@ export const WorkCard = (work: Work) => {
 					<Button
 						size="sm"
 						variant="outline"
-						className="flex-1"
+						className="flex-1 cursor-pointer"
 						onClick={() => window.open(work.githubUrl, "_blank")}
 					>
 						GitHub

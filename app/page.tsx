@@ -13,18 +13,18 @@ import { RotatableAvatar } from "@/components/ui/rotatable-avatar";
 import { Typewriter } from "@/components/ui/typewriter";
 import { TimelineItem } from "@/components/timeline-item";
 import { EXPERIENCE_DATA, SKILLS_DATA } from "./constants";
+import { TypographyH1, TypographyH2 } from "@/components/typography";
+import { GithubIcon } from "lucide-react";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-background bg-gray-900">
+		<div className="min-h-screen">
 			<div className="container mx-auto px-4 py-8 space-y-24">
 				{/* Biography Section */}
 				<section id="biography" className="space-y-6">
 					<div className="text-center space-y-4">
-						<RotatableAvatar src="avatar.png" alt="TsukuneA1's Avatar" />
-						<h1 className="text-4xl font-bold tracking-tight text-white">
-							TsukuneA1
-						</h1>
+						<RotatableAvatar src="avatar.png" alt="TsukuneA1's Avatar"/>
+						<TypographyH1 text="TsukuneA1" />
 
 						<div className="flex flex-wrap justify-center whitespace-pre text-[26px] sm:text-2xl md:text-[48px] tracking-tight text-gradient animate-gradient-x text-center font-bold text-4xl bg-gradient-to-r from-blue-500 via-emerald-400 to-purple-500 bg-clip-text text-transparent">
 							<span className="font-bold">I'm a</span>
@@ -53,9 +53,7 @@ export default function Home() {
 				{/* Skills Section */}
 				<section id="skills" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white">
-							Skills
-						</h2>
+						<TypographyH2 text="Skills" />
 						<p className="text-muted-foreground mt-2">
 							Technologies and tools I work with
 						</p>
@@ -109,9 +107,7 @@ export default function Home() {
 				{/* Experience Section */}
 				<section id="experience" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white">
-							Experience
-						</h2>
+						<TypographyH2 text="Experience" />
 						<p className="text-muted-foreground mt-2">
 							My professional journey
 						</p>
@@ -139,9 +135,7 @@ export default function Home() {
 				{/* Contact Section */}
 				<section id="contact" className="space-y-6">
 					<div className="text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white">
-							Contact
-						</h2>
+						<TypographyH2 text="Contact" />
 						<p className="text-muted-foreground mt-2">Get in touch with me</p>
 					</div>
 					<Card className="max-w-2xl mx-auto">
@@ -153,7 +147,16 @@ export default function Home() {
 							</CardDescription>
 						</CardHeader>
 						<CardContent className="space-y-4">
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+							<a
+								href="https://github.com/tsukuneA1"
+								aria-label="Visit my GitHub profile"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<GithubIcon className="mx-auto" size={48} />
+							</a>
+
+							{/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 								<Button variant="outline" className="w-full">
 									Email Me
 								</Button>
@@ -170,7 +173,7 @@ export default function Home() {
 								<Button variant="outline" className="w-full">
 									Twitter
 								</Button>
-							</div>
+							</div> */}
 						</CardContent>
 					</Card>
 				</section>
