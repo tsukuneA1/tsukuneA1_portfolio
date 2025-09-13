@@ -16,6 +16,7 @@ type BlogContent = {
 	title: string;
 	excerpt: string;
 	createdAt?: string;
+	updatedAt?: string;
 	content?: string;
 };
 
@@ -32,11 +33,13 @@ async function getBlogContent(fileName: string): Promise<BlogContent> {
 		const title = data.title || "Untitled";
 		const excerpt = data.excerpt || "ブログ記事";
 		const createdAt = data.createdAt;
+		const updatedAt = data.updatedAt;
 
 		return {
 			title,
 			excerpt,
 			createdAt,
+			updatedAt,
 			content,
 		};
 	} catch (error) {
@@ -63,6 +66,11 @@ export default async function BlogPage({
 			<header className="mb-8">
 				<h1 className="text-3xl font-bold mb-2">{content.title}</h1>
 				<time className="text-gray-500">作成日:{content.createdAt}</time>
+				{content.updatedAt && (
+					<time className="text-gray-500 ml-4">
+						更新日:{content.updatedAt}
+					</time>
+				)}
 			</header>
 
 			<div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900">
@@ -94,7 +102,7 @@ export default async function BlogPage({
 								className="text-blue-500 hover:text-blue-700 underline"
 							/>
 						),
-						br: ({ node, ...props }) => <br {...props} className="mb-4" />,
+						br: ({ node, ...props }) => <br {...props} />,
 						ol: ({ node, ...props }) => (
 							<ol
 								{...props}
