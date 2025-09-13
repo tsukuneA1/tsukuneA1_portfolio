@@ -47,6 +47,7 @@ export const SKILLS_DATA = {
 		"Tailwind CSS",
 		"TypeScript",
 		"Astro",
+		"Tanstack Query",
 	],
 	backend: [
 		"Ruby on Rails",
@@ -55,6 +56,7 @@ export const SKILLS_DATA = {
 		"Prisma",
 		"Python",
 		"PostgreSQL",
+		"Go lang",
 	],
 	tools: ["Git", "Docker", "Vercel", "Slack", "Figma"],
 } as const;

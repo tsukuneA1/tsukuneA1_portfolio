@@ -178,7 +178,7 @@ export const RotatableAvatar = ({
 				<AvatarImage
 					src={src}
 					alt={alt}
-					className="rounded-full w-36 h-36 mx-auto object-cover"
+					className="rounded-full w-36 h-36 mx-auto object-cover border-4"
 				/>
 			</Avatar>
 		</div>
