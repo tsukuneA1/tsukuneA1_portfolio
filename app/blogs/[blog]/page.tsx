@@ -67,9 +67,7 @@ export default async function BlogPage({
 				<h1 className="text-3xl font-bold mb-2">{content.title}</h1>
 				<time className="text-gray-500">作成日:{content.createdAt}</time>
 				{content.updatedAt && (
-					<time className="text-gray-500 ml-4">
-						更新日:{content.updatedAt}
-					</time>
+					<time className="text-gray-500 ml-4">更新日:{content.updatedAt}</time>
 				)}
 			</header>
 
