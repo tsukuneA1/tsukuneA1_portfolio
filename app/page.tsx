@@ -147,7 +147,12 @@ export default function Home() {
 							</CardDescription>
 						</CardHeader>
 						<CardContent className="space-y-4">
-							<a href="https://github.com/tsukuneA1">
+							<a
+								href="https://github.com/tsukuneA1"
+								aria-label="Visit my GitHub profile"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<GithubIcon className="mx-auto" size={48} />
 							</a>
 
