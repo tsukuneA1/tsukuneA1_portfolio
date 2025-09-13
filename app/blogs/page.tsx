@@ -2,6 +2,7 @@ import Link from "next/link";
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
+import { TypographyH1 } from "@/components/typography";
 
 interface BlogPost {
 	id: string;
@@ -41,7 +42,13 @@ export default async function BlogsPage() {
 
 	return (
 		<div className="max-w-4xl mx-auto px-4 py-8">
-			<h1 className="text-3xl font-bold mb-8">Blog Posts</h1>
+			<div className="text-center space-y-4 mb-12">
+				<TypographyH1 text="Blogs" />
+				<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+					これまでの体験や学びについての記事をまとめています
+				</p>
+			</div>
+
 			<div className="space-y-6">
 				{blogPosts.map((post) => (
 					<article key={post.id} className="border-b border-gray-200 pb-6">

@@ -62,7 +62,7 @@ export default async function BlogPage({
 		<article className="max-w-4xl mx-auto px-4 py-8">
 			<header className="mb-8">
 				<h1 className="text-3xl font-bold mb-2">{content.title}</h1>
-				<time className="text-gray-500">{content.createdAt}</time>
+				<time className="text-gray-500">作成日:{content.createdAt}</time>
 			</header>
 
 			<div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900">
@@ -73,13 +73,13 @@ export default async function BlogPage({
 						h1: ({ node, ...props }) => (
 							<h1
 								{...props}
-								className="text-3xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-gray-200"
+								className="text-3xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-gray-200 text-primary"
 							/>
 						),
 						h2: ({ node, ...props }) => (
 							<h2
 								{...props}
-								className="text-2xl font-semibold text-gray-800 mt-6 mb-3 pb-1 border-b border-gray-300"
+								className="text-2xl font-semibold text-gray-800 mt-6 mb-3 pb-1 border-b-2 border-primary-accent text-primary"
 							/>
 						),
 						h3: ({ node, ...props }) => (
