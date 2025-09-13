@@ -14,7 +14,7 @@ import { Typewriter } from "@/components/ui/typewriter";
 import { TimelineItem } from "@/components/timeline-item";
 import { EXPERIENCE_DATA, SKILLS_DATA } from "./constants";
 import { TypographyH1, TypographyH2 } from "@/components/typography";
-import { Github, GithubIcon } from "lucide-react";
+import { GithubIcon } from "lucide-react";
 
 export default function Home() {
 	return (
