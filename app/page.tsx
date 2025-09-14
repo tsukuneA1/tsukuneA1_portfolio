@@ -1,10 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { RotatableAvatar } from "@/components/ui/rotatable-avatar";
 import { Typewriter } from "@/components/ui/typewriter";
 import { TimelineItem } from "@/components/timeline-item";
-import { EXPERIENCE_DATA, SKILLS_DATA } from "./constants";
+import {
+	BACKEND_SKILLS,
+	EXPERIENCE_DATA,
+	FRONTEND_SKILLS,
+	TOOL_SKILLS,
+} from "./constants";
 import { TypographyH1, TypographyH2 } from "@/components/typography";
+import { SkillBadge } from "@/components/skill-badge";
 
 export default function Home() {
 	return (
@@ -53,10 +58,8 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
-									{SKILLS_DATA.frontend.map((skill) => (
-										<Badge key={skill} variant="secondary">
-											{skill}
-										</Badge>
+									{FRONTEND_SKILLS.map((skill) => (
+										<SkillBadge key={skill.displayName} {...skill} />
 									))}
 								</div>
 							</CardContent>
@@ -67,10 +70,8 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
-									{SKILLS_DATA.backend.map((skill) => (
-										<Badge key={skill} variant="secondary">
-											{skill}
-										</Badge>
+									{BACKEND_SKILLS.map((skill) => (
+										<SkillBadge key={skill.displayName} {...skill} />
 									))}
 								</div>
 							</CardContent>
@@ -81,10 +82,8 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<div className="flex flex-wrap gap-2">
-									{SKILLS_DATA.tools.map((skill) => (
-										<Badge key={skill} variant="secondary">
-											{skill}
-										</Badge>
+									{TOOL_SKILLS.map((skill) => (
+										<SkillBadge key={skill.displayName} {...skill} />
 									))}
 								</div>
 							</CardContent>

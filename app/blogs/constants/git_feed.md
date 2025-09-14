@@ -28,9 +28,13 @@ published: true
  - ルーター: Tanstack Query
  - 状態管理: Zustand
  - UIライブラリ: shadcn/ui
+ - デプロイ: Vercel
 
 ### バックエンド
  - フレームワーク: Ruby on Rails
+ - RDBMS: Postgres
+ - デプロイ: Render
+ - 本番DB: Neon
 
 ### スキーマ
  - OpenAPI

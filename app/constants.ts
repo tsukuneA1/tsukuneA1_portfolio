@@ -39,24 +39,32 @@ export const EXPERIENCE_DATA = [
 	},
 ] as const;
 
-export const SKILLS_DATA = {
-	frontend: [
-		"Next.js",
-		"React",
-		"Shadcn",
-		"Tailwind CSS",
-		"TypeScript",
-		"Astro",
-		"Tanstack Query",
-	],
-	backend: [
-		"Ruby on Rails",
-		"Hono",
-		"Node.js",
-		"Prisma",
-		"Python",
-		"PostgreSQL",
-		"Go lang",
-	],
-	tools: ["Git", "Docker", "Vercel", "Slack", "Figma"],
-} as const;
+type SkillData = {
+	displayName: string;
+	iconPath: string;
+};
+
+export const FRONTEND_SKILLS: SkillData[] = [
+	{ displayName: "Next.js", iconPath: "next" },
+	{ displayName: "React", iconPath: "react" },
+	{ displayName: "Tailwind CSS", iconPath: "tailwind" },
+	{ displayName: "TypeScript", iconPath: "ts" },
+	{ displayName: "Astro", iconPath: "astro" },
+];
+
+export const BACKEND_SKILLS: SkillData[] = [
+	{ displayName: "Ruby on Rails", iconPath: "rails" },
+	{ displayName: "Go", iconPath: "go" },
+	{ displayName: "Node.js", iconPath: "nodejs" },
+	{ displayName: "Prisma", iconPath: "prisma" },
+	{ displayName: "Python", iconPath: "python" },
+	{ displayName: "PostgreSQL", iconPath: "postgres" },
+];
+
+export const TOOL_SKILLS: SkillData[] = [
+	{ displayName: "Git", iconPath: "git" },
+	{ displayName: "GitHub", iconPath: "github" },
+	{ displayName: "Docker", iconPath: "docker" },
+	{ displayName: "Vercel", iconPath: "vercel" },
+	{ displayName: "Figma", iconPath: "figma" },
+];
