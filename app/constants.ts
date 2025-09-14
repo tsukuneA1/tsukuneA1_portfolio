@@ -59,6 +59,7 @@ export const BACKEND_SKILLS: SkillData[] = [
 	{ displayName: "Prisma", iconPath: "prisma" },
 	{ displayName: "Python", iconPath: "python" },
 	{ displayName: "PostgreSQL", iconPath: "postgres" },
+	{ displayName: "TypeScript", iconPath: "ts" },
 ];
 
 export const TOOL_SKILLS: SkillData[] = [

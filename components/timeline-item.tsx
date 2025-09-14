@@ -8,13 +8,13 @@ import {
 import { Badge } from "./ui/badge";
 import Link from "next/link";
 
-interface TimelineItemProps {
+type TimelineItemProps = {
 	title: string;
 	affiliation: string;
 	affiliationUrl?: string;
 	period: string;
 	description: string;
-}
+};
 
 export function TimelineItem({
 	title,

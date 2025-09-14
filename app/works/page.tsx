@@ -1,4 +1,4 @@
-import { WorkCard } from "@/components/workCard";
+import { WorkCard } from "@/components/work-card";
 import { works } from "./constants";
 import { TypographyH1 } from "@/components/typography";
 
