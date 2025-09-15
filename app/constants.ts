@@ -34,7 +34,7 @@ export const EXPERIENCE_DATA = [
 		affiliation: "winc",
 		period: "April 2024 - Present",
 		description:
-			"大学入学後、早稲田大学のコンピュータサークルWINCに参加し、プログラミングの基礎を学び始めました。",
+			"大学入学後、早稲田大学のコンピュータサークルWINCに参加し、Web開発を学び始めました。",
 		affiliationUrl: "https://www.winc.ne.jp/",
 	},
 ] as const;
