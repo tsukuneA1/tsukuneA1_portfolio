@@ -100,6 +100,13 @@ export default async function BlogPage({
 								className="text-blue-500 hover:text-blue-700 underline"
 							/>
 						),
+						img: ({ node, ...props }) => (
+							<img
+								{...props}
+								className="max-w-full h-auto rounded-lg my-4 shadow-md"
+								loading="lazy"
+							/>
+						),
 						br: ({ node, ...props }) => <br {...props} />,
 						ol: ({ node, ...props }) => (
 							<ol
@@ -108,9 +115,12 @@ export default async function BlogPage({
 							/>
 						),
 						ul: ({ node, ...props }) => (
-							<ul {...props} className="list-disc list-inside mb-4 space-y-2" />
+							<ul {...props} className="list-disc list-outside ml-6 mb-4 space-y-2" />
 						),
 						li: ({ node, ...props }) => <li {...props} className="ml-4" />,
+						p: ({ node, ...props }) => (
+							<p {...props} className="my-1 whitespace-pre-wrap" />
+						),
 					}}
 				>
 					{content.content}
