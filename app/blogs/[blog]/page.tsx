@@ -115,7 +115,10 @@ export default async function BlogPage({
 							/>
 						),
 						ul: ({ node, ...props }) => (
-							<ul {...props} className="list-disc list-outside ml-6 mb-4 space-y-2" />
+							<ul
+								{...props}
+								className="list-disc list-outside ml-6 mb-4 space-y-2"
+							/>
 						),
 						li: ({ node, ...props }) => <li {...props} className="ml-4" />,
 						p: ({ node, ...props }) => (
