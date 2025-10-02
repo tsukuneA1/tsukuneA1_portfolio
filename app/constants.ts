@@ -4,6 +4,7 @@ export interface ExperienceItem {
 	affiliationUrl?: string;
 	period: string;
 	description: string;
+	blogUrl?: string;
 }
 
 export const EXPERIENCE_DATA = [
@@ -13,6 +14,7 @@ export const EXPERIENCE_DATA = [
 		affiliationUrl: "https://pocketsign.co.jp/",
 		period: "August 2025 - October 2025",
 		description: "株式会社ポケットサインにてフルスタックエンジニアを担当",
+		blogUrl: "/blogs/summer-intern",
 	},
 	{
 		title: "CS専攻大学生になる",

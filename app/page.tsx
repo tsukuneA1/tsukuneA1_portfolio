@@ -105,14 +105,7 @@ export default function Home() {
 
 							<div className="space-y-8">
 								{EXPERIENCE_DATA.map((experience, index) => (
-									<TimelineItem
-										key={index}
-										title={experience.title}
-										affiliation={experience.affiliation}
-										affiliationUrl={experience.affiliationUrl}
-										period={experience.period}
-										description={experience.description}
-									/>
+									<TimelineItem key={index} {...experience} />
 								))}
 							</div>
 						</div>

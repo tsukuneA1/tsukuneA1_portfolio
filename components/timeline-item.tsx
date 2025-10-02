@@ -14,6 +14,7 @@ type TimelineItemProps = {
 	affiliationUrl?: string;
 	period: string;
 	description: string;
+	blogUrl?: string;
 };
 
 export function TimelineItem({
@@ -22,6 +23,7 @@ export function TimelineItem({
 	affiliationUrl,
 	period,
 	description,
+	blogUrl,
 }: TimelineItemProps) {
 	return (
 		<div className="relative flex items-start space-x-4">
@@ -44,6 +46,14 @@ export function TimelineItem({
 				</CardHeader>
 				<CardContent>
 					<p className="text-muted-foreground">{description}</p>
+					{blogUrl && (
+						<Link
+							href={blogUrl}
+							className="text-blue-500 hover:text-blue-700 underline mt-2 block"
+						>
+							Read more
+						</Link>
+					)}
 				</CardContent>
 			</Card>
 		</div>
