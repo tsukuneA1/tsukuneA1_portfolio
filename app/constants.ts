@@ -11,7 +11,7 @@ export const EXPERIENCE_DATA = [
 		title: "フルスタックエンジニア",
 		affiliation: "株式会社ポケットサイン",
 		affiliationUrl: "https://pocketsign.co.jp/",
-		period: "August 2025 - Present",
+		period: "August 2025 - October 2025",
 		description: "株式会社ポケットサインにてフルスタックエンジニアを担当",
 	},
 	{
