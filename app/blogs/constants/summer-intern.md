@@ -10,7 +10,7 @@ published: true
 
 ![ポケットサイン](/images/blogs/pocketsign-screenshot.png)
 
-※ポケットサインの方でもインターン体験記のブログを書きました。[これ]()です。業務内容自体はこっち見れば分かると思います。
+※ポケットサインの方でもインターン体験記のブログを書きました。[これ](https://note.com/pocketsign/n/nac70acea5084)です。業務内容自体はこっち見れば分かると思います。
 
 ## Frontend
 - React Router
