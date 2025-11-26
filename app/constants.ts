@@ -1,43 +1,43 @@
 export interface ExperienceItem {
 	title: string;
-	affiliation: string;
-	affiliationUrl?: string;
+	subtitle: string;
+	url: string;
 	period: string;
 	description: string;
 	blogUrl?: string;
 }
 
-export const EXPERIENCE_DATA = [
+export const EXPERIENCE_DATA: ExperienceItem[] = [
 	{
-		title: "フルスタックエンジニア",
-		affiliation: "株式会社ポケットサイン",
-		affiliationUrl: "https://pocketsign.co.jp/",
+		title: "株式会社ポケットサイン",
+		subtitle: "サマーインターン",
+		url: "https://pocketsign.co.jp/",
 		period: "August 2025 - October 2025",
 		description: "株式会社ポケットサインにてフルスタックエンジニアを担当",
 		blogUrl: "/blogs/summer-intern",
 	},
 	{
-		title: "CS専攻大学生になる",
-		affiliation: "早稲田大学情報理工学科",
-		affiliationUrl: "https://www.cs.waseda.ac.jp/",
+		title: "早稲田のCS専攻大学生になる",
+		subtitle: "学士(情報系)",
+		url: "https://www.cs.waseda.ac.jp/",
 		period: "April 2025 - Present",
 		description:
 			"大学の進振りで第一希望の情報理工学科に進学でき、本格的にコンピュータサイエンスを専攻し始める",
 	},
 	{
-		title: "フロントエンドエンジニア",
-		affiliation: "株式会社アルゴ式",
-		affiliationUrl: "https://algo-method.co.jp/",
+		title: "株式会社アルゴ式でエンジニアインターン",
+		subtitle: "長期インターン",
+		url: "https://algo-method.co.jp/",
 		period: "March 2025 - Present",
-		description: "株式会社アルゴ式にてフロントエンドエンジニアを担当",
+		description: "株式会社アルゴ式にてフルスタックエンジニアを担当",
 	},
 	{
 		title: "プログラミングの勉強を開始",
-		affiliation: "winc",
+		subtitle: "Web開発開始",
 		period: "April 2024 - Present",
 		description:
 			"大学入学後、早稲田大学のコンピュータサークルWINCに参加し、Web開発を学び始めました。",
-		affiliationUrl: "https://www.winc.ne.jp/",
+		url: "https://www.winc.ne.jp/",
 	},
 ] as const;
 
