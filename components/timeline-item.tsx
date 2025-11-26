@@ -27,7 +27,7 @@ export function TimelineItem({
 }: TimelineItemProps) {
 	return (
 		<div className="relative flex items-start space-x-4">
-			<div className="flex-shrink-0 w-8 h-8 bg-primary rounded-full border-4 border-background relative z-10"></div>
+			<div className="flex-shrink-0 w-4 h-4 bg-primary-accent hover:scale-130 hover:bg-white hover:border-primary-accent hover:border-2 rounded-full border-4 border-background relative z-10 transition-all duration-300"></div>
 			<Card className="flex-1">
 				<CardHeader>
 					<div className="flex justify-between items-start">
