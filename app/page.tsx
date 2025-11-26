@@ -1,13 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RotatableAvatar } from "@/components/ui/rotatable-avatar";
 import { Typewriter } from "@/components/ui/typewriter";
-import { TimelineItem } from "@/components/timeline-item";
-import {
-	BACKEND_SKILLS,
-	EXPERIENCE_DATA,
-	FRONTEND_SKILLS,
-	TOOL_SKILLS,
-} from "./constants";
+import { Timeline } from "@/app/_components/timeline";
+import { BACKEND_SKILLS, FRONTEND_SKILLS, TOOL_SKILLS } from "./constants";
 import { TypographyH1, TypographyH2 } from "@/components/typography";
 import { SkillBadge } from "@/components/skill-badge";
 
@@ -99,17 +94,7 @@ export default function Home() {
 							これまでの職務経験とプロジェクト
 						</p>
 					</div>
-					<div className="max-w-4xl mx-auto">
-						<div className="relative">
-							<div className="absolute left-[7px] top-0 bottom-0 w-0.5 bg-border bg-primary-accent"></div>
-
-							<div className="space-y-8">
-								{EXPERIENCE_DATA.map((experience, index) => (
-									<TimelineItem key={index} {...experience} />
-								))}
-							</div>
-						</div>
-					</div>
+					<Timeline />
 				</section>
 
 				{/* Contact Section */}
