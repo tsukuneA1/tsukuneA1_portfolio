@@ -8,10 +8,29 @@ import {
 import { Badge } from "./ui/badge";
 import Link from "next/link";
 
+import React from "react";
+
+type AnchorProps = {
+  url: string;
+  children: React.ReactNode;
+}
+
+const Anchor = ({ url, children }: AnchorProps) => {
+  return (
+    <a
+      href={url}
+      className="relative after:content-[''] after:absolute after:left-0 after:bottom-[-1px] after:w-full after:h-[2px] after:bg-slate-700 after:scale-x-0 after:scale-y-100 after:origin-left-top after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-right-top"
+    >
+      {children}
+    </a>
+  );
+}
+
+
 type TimelineItemProps = {
 	title: string;
-	affiliation: string;
-	affiliationUrl?: string;
+	subtitle: string;
+	url: string;
 	period: string;
 	description: string;
 	blogUrl?: string;
@@ -19,8 +38,8 @@ type TimelineItemProps = {
 
 export function TimelineItem({
 	title,
-	affiliation,
-	affiliationUrl,
+	subtitle,
+	url,
 	period,
 	description,
 	blogUrl,
@@ -32,13 +51,11 @@ export function TimelineItem({
 				<CardHeader>
 					<div className="flex justify-between items-start">
 						<div>
-							<CardTitle className="text-lg">{title}</CardTitle>
+							<CardTitle className="text-lg">
+								<Anchor url={url}>{title}</Anchor>
+								</CardTitle>
 							<CardDescription>
-								{affiliationUrl ? (
-									<Link href={affiliationUrl}>{affiliation}</Link>
-								) : (
-									affiliation
-								)}
+								{subtitle}
 							</CardDescription>
 						</div>
 						<Badge variant="outline">{period}</Badge>
