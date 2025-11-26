@@ -25,7 +25,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 			"大学の進振りで第一希望の情報理工学科に進学でき、本格的にコンピュータサイエンスを専攻し始める",
 	},
 	{
-		title: "株式会社アルゴ式でエンジニアインターン",
+		title: "株式会社アルゴ式",
 		subtitle: "長期インターン",
 		url: "https://algo-method.co.jp/",
 		period: "March 2025 - Present",
