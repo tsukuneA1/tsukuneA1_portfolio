@@ -16,7 +16,7 @@ export default function Home() {
 		<div className="min-h-screen">
 			<div className="container mx-auto px-4 py-8 space-y-24">
 				{/* Biography Section */}
-				<section id="biography" className="space-y-6">
+				<section id="biography" className="space-y-4 md:space-y-6">
 					<div className="text-center space-y-4">
 						<RotatableAvatar src="avatar.png" alt="TsukuneA1's Avatar" />
 						<TypographyH1 text="TsukuneA1" />
@@ -101,7 +101,7 @@ export default function Home() {
 					</div>
 					<div className="max-w-4xl mx-auto">
 						<div className="relative">
-							<div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border"></div>
+							<div className="absolute left-[7px] top-0 bottom-0 w-0.5 bg-border bg-primary-accent"></div>
 
 							<div className="space-y-8">
 								{EXPERIENCE_DATA.map((experience, index) => (
