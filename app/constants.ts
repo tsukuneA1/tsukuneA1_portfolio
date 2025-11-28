@@ -9,8 +9,15 @@ export interface ExperienceItem {
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
 	{
+		title: "株式会社LegalOn Technologies",
+		subtitle: "SWEインターン",
+		url: "https://legalontech.jp/",
+		period: "December 2025 - Present",
+		description: "株式会社LegalOn Technologiesにてソフトウェアエンジニアを担当",
+	},
+	{
 		title: "株式会社ポケットサイン",
-		subtitle: "サマーインターン",
+		subtitle: "SWEサマーインターン",
 		url: "https://pocketsign.co.jp/",
 		period: "August 2025 - October 2025",
 		description: "株式会社ポケットサインにてフルスタックエンジニアを担当",
@@ -26,7 +33,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 	},
 	{
 		title: "株式会社アルゴ式",
-		subtitle: "長期インターン",
+		subtitle: "SWE長期インターン",
 		url: "https://algo-method.co.jp/",
 		period: "March 2025 - Present",
 		description: "株式会社アルゴ式にてフルスタックエンジニアを担当",
