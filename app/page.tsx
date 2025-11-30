@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AnimatedAvatar } from "@/components/ui/rotatable-avatar";
+import { AnimatedAvatar } from "@/components/animated-avatar";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Timeline } from "@/app/_components/timeline";
 import { BACKEND_SKILLS, FRONTEND_SKILLS, TOOL_SKILLS } from "./constants";
