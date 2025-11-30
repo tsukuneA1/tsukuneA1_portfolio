@@ -28,7 +28,7 @@ export const AnimatedAvatar = () => {
 
 	return (
 		<div
-			className="relative w-32 h-32 flex items-center justify-center mx-auto"
+			className="relative w-32 h-32 flex items-center justify-center mx-auto cursor-pointer"
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
