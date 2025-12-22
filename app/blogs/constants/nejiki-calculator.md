@@ -1,7 +1,7 @@
 ---
 title: 大学生が個人開発をするうえで実感したドメイン理解の重要性
-createdAt: "2025-09-06"
-updatedAt: "2025-09-14"
+createdAt: "2025-12-22"
+updatedAt: "2025-12-22"
 excerpt: "個人開発で作ったWebアプリの反省"
 published: true
 ---
