@@ -1,7 +1,7 @@
 ---
 title: AIツール多様化時代の学生チーム開発基盤 - Docusaurus + ruleSyncで実現した持続可能な受託開発体制
-createdAt: "2025-01-03"
-updatedAt: "2025-01-03"
+createdAt: "2026-01-03"
+updatedAt: "2026-01-03"
 excerpt: "大学サークルの受託開発で、メンバーごとに異なるAIツール（Claude/ChatGPT/Cursor）を使う環境でも統一されたコード品質を保つための開発基盤構築事例"
 published: false
 ---
