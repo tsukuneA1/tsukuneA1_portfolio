@@ -46,6 +46,8 @@ published: false
 
 Next.jsなのにimgタグをそのまま使っていました。おそらく当時の自分はImageコンポーネントのwidth, heightプロパティがアスペクト比を確定させてCLS対策をする為のものだということが分からなくて、「width, heightを設定しているのに画像の大きさが変わらない！よく分からないからimgタグを使おう！」という理由でimgタグを使ったんだと思います。
 
+Cache-Controlヘッダーが設定されていなかったため、ブラウザが毎回VercelのEdgeに確認リクエスト(304 Not Modified)を送り、全てがEdge Requestとしてカウントが回っていました。
+
 これによってVercelのHobbyプランのEdge Requestの上限である1Mリクエストをはるかに超えて3Mリクエストとか届いていてVercelさんからおしかりのメールをもらいました。
 
 ### Prisma Clientがシングルトンパターンになっていなかった。
