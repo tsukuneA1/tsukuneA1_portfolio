@@ -10,6 +10,7 @@ interface BlogPost {
 	excerpt: string;
 	date: string;
 	content?: string;
+	published?: boolean;
 }
 
 async function getBlogPosts(): Promise<BlogPost[]> {
@@ -28,13 +29,14 @@ async function getBlogPosts(): Promise<BlogPost[]> {
 				title: data.title,
 				excerpt: data.excerpt,
 				date: data.createdAt,
+				published: data.published ?? true,
 			};
 		}),
 	);
 
-	return posts.sort(
-		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-	);
+	return posts
+		.filter((post) => post.published)
+		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export default async function BlogsPage() {

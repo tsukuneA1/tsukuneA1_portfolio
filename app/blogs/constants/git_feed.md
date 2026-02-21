@@ -3,7 +3,7 @@ title: AI驚き屋が嫌いだったので一次情報だけを取れるエン�
 createdAt: "2025-09-14"
 updatedAt: "2025-11-04"
 excerpt: "GitFeedというアプリを作りました。プロトタイプです。"
-published: true
+published: false
 ---
 ## 経緯
 [リポジトリ](https://github.com/tsukuneA1/git_feed)

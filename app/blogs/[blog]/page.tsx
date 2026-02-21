@@ -18,6 +18,7 @@ type BlogContent = {
 	createdAt?: string;
 	updatedAt?: string;
 	content?: string;
+	published?: boolean;
 };
 
 async function getBlogContent(fileName: string): Promise<BlogContent> {
@@ -34,6 +35,7 @@ async function getBlogContent(fileName: string): Promise<BlogContent> {
 		const excerpt = data.excerpt || "ブログ記事";
 		const createdAt = data.createdAt;
 		const updatedAt = data.updatedAt;
+		const published = data.published ?? true;
 
 		return {
 			title,
@@ -41,6 +43,7 @@ async function getBlogContent(fileName: string): Promise<BlogContent> {
 			createdAt,
 			updatedAt,
 			content,
+			published,
 		};
 	} catch (error) {
 		throw new Error(`Blog post not found: ${fileName}`);
@@ -58,6 +61,10 @@ export default async function BlogPage({
 	try {
 		content = await getBlogContent(blog);
 	} catch (error) {
+		notFound();
+	}
+
+	if (!content.published) {
 		notFound();
 	}
 
@@ -138,7 +145,23 @@ export async function generateStaticParams() {
 	const filenames = await fs.promises.readdir(blogDir);
 	const mdFiles = filenames.filter((name) => name.endsWith(".md"));
 
-	return mdFiles.map((filename) => ({
-		blog: path.basename(filename, ".md"),
-	}));
+	const publishedBlogs = await Promise.all(
+		mdFiles.map(async (filename) => {
+			const filePath = path.join(blogDir, filename);
+			const fileContents = await fs.promises.readFile(filePath, "utf8");
+			const { data } = matter(fileContents);
+			const published = data.published ?? true;
+
+			return {
+				filename,
+				published,
+			};
+		}),
+	);
+
+	return publishedBlogs
+		.filter((blog) => blog.published)
+		.map((blog) => ({
+			blog: path.basename(blog.filename, ".md"),
+		}));
 }

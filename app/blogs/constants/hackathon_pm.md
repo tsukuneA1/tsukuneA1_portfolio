@@ -3,7 +3,7 @@ title: WINCというサークルの夏合宿ハッカソンでPMをやった話
 createdAt: "2025-09-06"
 updatedAt: "2025-09-14"
 excerpt: "早稲田大学のWINCというプログラミングサークルで毎年夏に開催されているアプリ開発ハッカソンに参加しました。なぜかPMをやっていたのでそれの体験記。"
-published: true
+published: false
 ---
 ## 前提
 [リポジトリ](https://github.com/tsukuneA1/git_feed)
