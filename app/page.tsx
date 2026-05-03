@@ -33,7 +33,7 @@ export default function Home() {
 						</CardHeader>
 						<CardContent className="space-y-4">
 							<p className="text-muted-foreground">
-								早稲田大学基幹理工学部情報理工学科2年生。プログラミングとポケモンが好き。
+								早稲田大学基幹理工学部情報理工学科3年生。プログラミングとポケモンが好き。
 							</p>
 						</CardContent>
 					</Card>

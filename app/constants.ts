@@ -10,7 +10,7 @@ export interface ExperienceItem {
 export const EXPERIENCE_DATA: ExperienceItem[] = [
 	{
 		title: "株式会社LegalOn Technologies",
-		subtitle: "SWEインターン",
+		subtitle: "SWE長期インターン",
 		url: "https://legalontech.jp/",
 		period: "December 2025 - Present",
 		description: "株式会社LegalOn Technologiesにてソフトウェアエンジニアを担当",
