@@ -12,8 +12,9 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 		title: "株式会社LegalOn Technologies",
 		subtitle: "SWE長期インターン",
 		url: "https://legalontech.jp/",
-		period: "December 2025 - Present",
+		period: "December 2025 - June 2026",
 		description: "株式会社LegalOn Technologiesにてソフトウェアエンジニアを担当",
+		blogUrl: "https://tech.legalforce.co.jp/entry/structuring-kanpo-pdf-with-llm",
 	},
 	{
 		title: "株式会社ポケットサイン",
